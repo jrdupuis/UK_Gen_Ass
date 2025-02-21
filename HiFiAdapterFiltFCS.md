@@ -27,7 +27,7 @@ do
 done
 ```
 
-### Run FCS adaptor filtering on each fasta file
+### Run FCS adaptor filtering on each .fasta
 
 ```bash
 for x in `ls *fasta | sed 's/\.fasta//g'`;
@@ -37,7 +37,7 @@ do
 done
 ```
 
-### HiFiAdapterFilt
+### Run HiFiAdapterFilt on each .fastq 
 
 ```bash
 for x in `ls *fastq | sed 's/\.fastq//g'`;
