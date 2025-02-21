@@ -1,6 +1,6 @@
 # HiFiAdapterFiltFCS
 
-Commands to run the NCBI Foreign Contamination Screen for adaptor sequences on HiFi data to remove HiFi reads containing adapter sequence artifacts.
+Commands to run the NCBI Foreign Contamination Screen and HiFiAdapterFilt for adaptor sequences on HiFi data to remove HiFi reads containing adapter sequence artifacts.
 
 ## Table of Contents
 
