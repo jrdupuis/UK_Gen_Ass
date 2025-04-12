@@ -5,6 +5,7 @@ KAT (K-mer Analysis Toolkit) and Purge_Dups are tools used for analyzing k-mers 
 ## Requirements and dependencies:
 
 - Primary and alternate assemblies in FASTA format 
+- HiFi reads in compressed FASTQ format (fastq.gz)
 - [KAT](https://github.com/TGAC/KAT)
 - [Purge_Dups](https://github.com/dfguan/purge_dups)
 - [minimap2](https://github.com/lh3/minimap2)
@@ -61,9 +62,6 @@ cat primary.hap.fa a_genome.fasta > h_genome.fasta
 
 # Index the combined genome assembly
 samtools faidx h_genome.fasta
-
-# Activate purge_dups conda environment
-source activate /project/ag100pest/sheina.sim/condaenvs/purgedups/
 
 # Map PacBio reads to the combined genome
 minimap2 -xmap-pb -t 48 h_genome.fasta *.fastq.gz | gzip -c - > h_mapping.paf.gz
