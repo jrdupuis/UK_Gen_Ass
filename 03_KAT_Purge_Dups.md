@@ -87,7 +87,6 @@ get_seqs -e h_dups.bed h_genome.fasta -p haps
 
 #### Rename final output files
 
-# Rename output files with consistent nomenclature
 ```bash
 mv primary.purged.fa assembly_primary_purged.fasta
 mv primary.hap.fa primary.hap.fasta
