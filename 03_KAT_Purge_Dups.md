@@ -59,9 +59,6 @@ get_seqs -e p_dups.bed p_genome.fasta -p primary
 # Concatenate primary haplotype assembly with alternate genome
 cat primary.hap.fa a_genome.fasta > h_genome.fasta
 
-# Activate samtools conda environment
-source activate /project/ag100pest/sheina.sim/condaenvs/samtools/
-
 # Index the combined genome assembly
 samtools faidx h_genome.fasta
 
