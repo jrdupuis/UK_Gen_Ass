@@ -33,7 +33,7 @@ mkdir in
 
 # Put HiC reads and assembly in "in" directory
 
-hicprefix="$(ls in/*HiC_R1.fastq.gz | sed 's/_R1.fastq.gz//')"
+hicprefix="$(ls in/ | grep "R1" | sed 's/_R1.fastq.gz//' )"
 assembly="$(ls in/*.fasta | sed 's/.fasta//')"
 
 # Run wrapper script
