@@ -28,6 +28,14 @@ YaHS and MitoHiFi are two tools that can be used to scaffold contigs and identif
 ### YaHS
 
 ```bash
+# Set up directory structure
+mkdir in
+
+# Put HiC reads and assembly in "in" directory
+
+hicprefix="$(ls in/*HiC_R1.fastq.gz | sed 's/_R1.fastq.gz//')"
+assembly="$(ls in/*.fasta | sed 's/.fasta//')"
+
 # Run wrapper script
 chmod u+x hic_v2.sh
 ./hic_v2.sh -f ${hicprefix} -r ${assembly} 
