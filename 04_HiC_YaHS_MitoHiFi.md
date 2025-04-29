@@ -34,7 +34,7 @@ mkdir in
 # Put HiC reads and assembly in "in" directory
 
 hicprefix="$(ls in/ | grep "R1" | sed 's/_R1.fastq.gz//' )"
-assembly="$(ls in/*.fasta | sed 's/.fasta//')"
+assembly="$(ls in/ | grep ".fasta$" | sed 's/.fasta//')"
 
 # Run wrapper script
 chmod u+x hic_v2.sh
