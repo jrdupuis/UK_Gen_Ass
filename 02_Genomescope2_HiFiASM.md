@@ -17,6 +17,7 @@ Use genomescope2 to estimate genome size and coverage
 ```bash
 ls *fcsfilt.fastq.gz > FILES
 
+mkdir ./tmp
 kmc -k21 -t48 -m64 -ci1 -cs10000000 @FILES reads tmp/
 
 kmc_tools transform reads histogram kmcreads10000000.histo -cx10000000
